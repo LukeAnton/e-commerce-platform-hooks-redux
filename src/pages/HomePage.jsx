@@ -4,7 +4,7 @@ import "./homepage.scss";
 
 import MenuItem from "../components/menuItem/MenuItem";
 
-const HomePage = () => {
+const HomePage = ({ history }) => {
   return (
     <div className="homepage">
       <Directory />
