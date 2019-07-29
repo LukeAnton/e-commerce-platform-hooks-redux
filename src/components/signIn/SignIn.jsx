@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FormInput from "../formIput/FormInput";
-
+import CustomButton from "../customButton/CustomButton";
 import "./signIn.scss";
 
 const SignIn = () => {
@@ -24,23 +24,24 @@ const SignIn = () => {
       <h2>I already have an account</h2>
       <span>Sign in with your email and password</span>
       <form onSubmit={onSubmit}>
-        <label>Email</label>
         <FormInput
           name="email"
           type="email"
+          label="email"
           value={email}
           onChange={onChange}
           required
         />
-        <label>Password</label>
+
         <FormInput
           name="password"
           type="password"
+          label="password"
           value={password}
           onChange={onChange}
           required
         />
-        <FormInput type="submit" value="Submit Form" />
+        <CustomButton type="submit">Sign In</CustomButton>
       </form>
     </div>
   );
