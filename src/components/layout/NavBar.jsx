@@ -1,5 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import { auth } from "../../firebase/firebase";
 
@@ -34,4 +36,12 @@ const NavBar = ({ currentUser }) => {
   );
 };
 
-export default NavBar;
+NavBar.propTypes = {
+  currentUser: PropTypes.object
+};
+
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(NavBar);
