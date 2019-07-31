@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
+import CartDropdown from "../cartDropdown/CartDropdown";
+import CartIcon from "../cartIcon/CartIcon";
+
 import { auth } from "../../firebase/firebase";
 
 import { ReactComponent as Logo } from "../../assets/logo.svg";
@@ -31,7 +34,9 @@ const NavBar = ({ currentUser }) => {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };
