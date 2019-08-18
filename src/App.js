@@ -9,10 +9,12 @@ import SignInSignUp from "./components/signInSignUp/SignInSignUp";
 import CheckoutPage from "./pages/checkout/CheckoutPage";
 
 import NavBar from "./components/layout/NavBar";
-import { auth, createUserProfileDocument } from "./firebase/firebase";
-import { setCurrentUser } from "./redux/user/userActions";
 
+import { auth, createUserProfileDocument } from "./firebase/firebase";
+
+import { setCurrentUser } from "./redux/user/userActions";
 import { selectCurrentUser } from "./redux/user/userSelector";
+
 import "./App.scss";
 
 class App extends Component {
