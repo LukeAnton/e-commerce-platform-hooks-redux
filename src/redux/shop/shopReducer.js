@@ -7,7 +7,8 @@ const {
 
 const INITIAL_STATE = {
   collections: null,
-  isFetching: false
+  isFetching: false,
+  errorMessage: undefined
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -23,7 +24,12 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         isFetching: false,
         collections: action.payload
       };
-
+    case FETCH_COLLECTIONS_FAILURE:
+      return {
+        ...state,
+        isFetching: false,
+        errorMessage: action.payload
+      };
     default:
       return state;
   }
